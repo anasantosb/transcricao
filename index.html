@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcrição</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center; /* Centraliza todos os elementos dentro do body */
+    }
+ 
+    button {
+      border-radius: 5px; /* Define o raio das bordas para 5 pixels, você pode ajustar conforme necessário */
+      background-color: #0077b6; /* Define a cor de fundo do botão */
+      color: white; /* Define a cor do texto do botão como branco */
+      padding: 10px 20px; /* Adiciona um espaçamento interno de 10 pixels superior/inferior e 20 pixels esquerda/direita */
+      border: none; /* Remove a borda do botão */
+      cursor: pointer; /* Muda o cursor para uma mão ao passar por cima do botão */
+    }
+ 
+    header {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+      align-items: center; /* Alinha os elementos verticalmente */
+    }
+ 
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+ 
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+ 
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+ 
+    main {
+      padding: 20px;
+    }
+ 
+    footer {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+ 
+    #section1 img, #section2 img {
+      display: block;
+      margin: 0 auto; /* Isso centraliza horizontalmente a imagem */
+      width: 70%; /* Defina a largura desejada */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+ 
+    img {
+      width: 200px;
+      height: 200px;
+ 
+    }
+ 
+    /* Estilos de contraste */
+    .high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+ 
+    .black-and-white {
+      background-color: #fff;
+      color: #000;
+    }
+ 
+    .blue-contrast {
+      background-color: #007bff;
+      color: #fff;
+    }
+ 
+    .green-contrast {
+      background-color: #28a745;
+      color: #fff;
+    }
+ 
+    .yellow-contrast {
+      background-color: #ffc107;
+      color: #000;
+    }
+ 
+    /* Estilos para alinhar a navegação à direita */
+    .right-align {
+      margin-left: auto; /* Empurra a navegação para a direita */
+    }
+ 
+    .container {
+      margin-bottom: 20px;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+ 
+      #contrastOptions {
+      text-align: center; /* Centraliza os elementos dentro da div */
+    }
+ 
+      #contrastOptions button {
+      margin: 5px; /* Adiciona margem entre os botões */
+    }
+ 
+    #section1.open , #section2.open,  #section3.open {
+      display: flex;
+      background-color: #aabae7;
+      border-radius: 10px;
+      height: auto;
+      padding: 1em;
+      margin: 1em;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      margin: 5px;
+    }
+ 
+    h3 {
+      font-size: 15px;
+    }
+ 
+    a {
+      text-decoration: none;
+    }
+ 
+    div.box {
+      width: 200px;
+      display: inline-block;
+      padding: 50px;
+    }
+ 
+    body {
+      font-family: Arial, sans-serif;
+     }
+ 
+    #transcription {
+      white-space: pre-wrap;
+      border: #007bff solid 0.3em;
+      padding: 1.5em;
+      border-radius: 10px;
+    }
+ 
+    .botoes{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  </style>
+</head>
+ 
+<body>
+  <header>
+    <!-- Regra 2: Não altere a semântica de elementos nativos do HTML -->
+    <h1>Site de Transcrição de Áudio</h1>
+    <nav class="right-align">
+      <ul>
+        <li><a href="https://dictation.io/">Dictation.io</a></li>
+        <li><a href="https://otranscribe.com/">oTranscribe</a></li>
+        <li><a href="https://apps.apple.com/br/app/transcribe-live/id1225573691">Transcribe Live</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main>
+ 
+    <div id="contrastOptions">
+      <button id="blackAndWhite">Preto e Branco</button>
+      <button id="highContrast">Alto Contraste</button>
+      <button id="blueContrast">Azul</button>
+      <button id="greenContrast">Verde</button>
+      <button id="yellowContrast">Amarelo</button>
+    </div>
+    <p>
+      <h2>Os melhores apps para transcrição de áudio</h2>
+     
+      <div class="box">
+          <img src="https://pbs.twimg.com/profile_images/378800000683914136/44821787acb18e37ed7f9cdf402bfd6a_400x400.png"/>
+          <span> oTranscribe </span>
+      </div>
+      <div class="box">
+        <img src="https://a.fsdn.com/con/app/proj/dictation-io.s/screenshots/2.PNG/max/max/1"/>
+        <span> Dictation.io </span>
+    </div>
+      <div class="box">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/20/04/6a20047c-41ff-6521-20b5-d532acc6c564/AppIconRelease-0-1x_U007epad-0-85-220-0.png/230x0w.webp"/>
+        <span> Transcribe Live </span>
+    </div>
+    <div class="botoes">
+    <div class="container">
+      <button onclick="toggleVisibility('section1')">A importância da Transcrição de áudio na Acessibilidade</button>
+      <div id="section1" class="hidden">
+        <h2>SOBRE</h2>
+          <p>A audiodescrição é um recurso de acessibilidade que permite que as pessoas com deficiência visual possam assistir e entender melhor filmes, peças de teatro, programas de TV, exposições, mostras, musicais, óperas e outros, ouvindo o que pode ser visto. É a arte de transformar aquilo que é visto no que é ouvido, o que abre muitas janelas do mundo para as pessoas com deficiência visual.</p>
+          <p>
+          <a href="https://www.ce.ufpb.br/nedesp/contents/noticias/audiodescricao-recurso-de-acessibilidade-de-inclusao-cultural#:~:text=A%20audiodescri%C3%A7%C3%A3o%20%C3%A9%20um%20recurso,o%20que%20pode%20ser%20visto.">Leia mais em NEDESP</a>
+      </div>
+    </div>
+ 
+    <div class="container">
+      <button onclick="toggleVisibility('section2')">Benefícios da Transcrição de Áudio para Texto</button>
+      <div id="section2" class="hidden">
+        <h2>SOBRE</h2>
+          <p>Alta capacidade de volume: O software de transcrição lida com um grande volume de áudio sem comprometer a qualidade ou a eficiência.<br>Exatidão: Ao contrário dos programas comuns que podem produzir resultados imprecisos, custando mais tempo e dinheiro, o Transkriptor garante transcrições precisas.</p>      
+          <p>
+          <a href="https://transkriptor.com/pt-br/audio-para-texto-transcricao/">Leia mais em Transkriptor</a>
+      </div>
+    </div>
+ 
+ 
+    <div class="container">
+      <button onclick="toggleVisibility('section3')">Melhores softwares e serviços de transcrição de IA </button>
+      <div id="section3" class="hidden">
+        <h2>SOBRE</h2>
+          <p>(Março de 2024)
+            <p></p>
+            <p> - Beey. -
+            <p> - IA NOVA. -
+            <p> - Sonix. -
+            <p> - Verbit.ai. -
+          </p>          
+          <p>
+          <a href="https://www.unite.ai/pt/melhores-servi%C3%A7os-de-software-de-transcri%C3%A7%C3%A3o-ai/">Leia mais aqui!</a>
+      </div>
+    </div>
+  </div>
+    <br>
+ 
+    <button id="startButton">Iniciar Transcrição</button>
+    <div id="transcription"></div>
+ 
+  </main>
+ 
+  <footer>
+    <p>© 2024 - Site de Esportes. Ana Laura Santos Borges</p>
+  </footer>
+ 
+  <script>
+    const blackAndWhiteBtn = document.getElementById('blackAndWhite');
+    const highContrastBtn = document.getElementById('highContrast');
+    const blueContrastBtn = document.getElementById('blueContrast');
+    const greenContrastBtn = document.getElementById('greenContrast');
+    const yellowContrastBtn = document.getElementById('yellowContrast');
+ 
+    blackAndWhiteBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('black-and-white');
+    });
+ 
+    highContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('black-and-white', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('high-contrast');
+    });
+ 
+    blueContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('blue-contrast');
+    });
+ 
+    greenContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'yellow-contrast');
+      document.body.classList.add('green-contrast');
+    });
+ 
+    yellowContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'green-contrast');
+      document.body.classList.add('yellow-contrast');
+    });
+ 
+    function toggleVisibility(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section.style.display === 'none' || section.style.display === '') {
+      section.style.display = 'block';
+      section.classList.add('open'); // Adiciona a classe 'open' quando a seção é mostrada
+    } else {
+      section.style.display = 'none';
+      section.classList.remove('open'); // Remove a classe 'open' quando a seção é ocultada
+    }
+  }
+ 
+  // Fecha a seção 1 quando o site é carregado
+  window.addEventListener('load', function() {
+    var section1 = document.getElementById('section1');
+    section1.style.display = 'none'; // Oculta a seção 1
+    section1.classList.remove('open'); // Remove a classe 'open'
+  });
+ 
+  window.addEventListener('load', function() {
+    var section2 = document.getElementById('section2');
+    section2.style.display = 'none'; // Oculta a seção 2
+    section2.classList.remove('open'); // Remove a classe 'open'
+  });
+ 
+  window.addEventListener('load', function() {
+    var section3 = document.getElementById('section3');
+    section3.style.display = 'none'; // Oculta a seção 2
+    section3.classList.remove('open'); // Remove a classe 'open'
+  });
+ 
+ 
+    // Obtém referências para os elementos HTML relevantes
+    const transcription = document.getElementById('transcription');
+  const startButton = document.getElementById('startButton');
+ 
+  // Variáveis para controle do reconhecimento de fala
+  let recognizing = false; // Indica se o reconhecimento está ocorrendo
+  let finalTranscript = ''; // Armazena o texto final reconhecido
+ 
+  // Verifica se o navegador suporta a API de Reconhecimento de Fala
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+ 
+  // Verifica se a API de Reconhecimento de Fala é suportada
+  if (window.SpeechRecognition) {
+    // Cria uma instância do reconhecimento de fala
+    var recognition = new SpeechRecognition();
+    // Configurações do reconhecimento de fala
+    recognition.continuous = true; // Reconhecimento contínuo
+    recognition.interimResults = true; // Resultados intermediários
+    recognition.lang = 'pt-BR'; // Define o idioma como Português- Brasil
+ 
+    // Evento acionado quando o reconhecimento de fala inicia
+    recognition.onstart = function() {
+      recognizing = true; // Define que o reconhecimento está ocorrendo
+      startButton.textContent = 'Parar Transcrição'; // Atualiza o texto do botão
+    };
+ 
+    // Evento acionado em caso de erro durante o reconhecimento
+    recognition.onerror = function(event) {
+      console.log('Erro de reconhecimento: ' + event.error); // Registra o erro no console
+    };
+ 
+    // Evento acionado quando o reconhecimento de fala termina
+    recognition.onend = function() {
+      recognizing = false; // Define que o reconhecimento não está mais ocorrendo
+      startButton.textContent = 'Iniciar Transcrição'; // Atualiza o texto do botão
+    };
+ 
+    // Evento acionado quando resultados de reconhecimento de fala estão disponíveis
+    recognition.onresult = function(event) {  
+      let interimTranscript = ''; // Variável para transcrição intermediária
+      // Itera sobre os resultados do reconhecimento
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          // Se a transcrição for final, adiciona ao texto final
+          finalTranscript += event.results[i][0].transcript;
+        } else {
+          // Caso contrário, é uma transcrição intermediária
+          interimTranscript += event.results[i][0].transcript;
+        }
+      }
+      // Exibe o texto reconhecido ao usuário
+      transcription.textContent = finalTranscript + interimTranscript;
+    };
+ 
+    // Adiciona evento de clique ao botão de início/parada da transcrição
+    startButton.addEventListener('click', function() {
+      if (recognizing) {
+        recognition.stop(); // Para o reconhecimento se já estiver ocorrendo
+        return;
+      }
+      // Se não estiver ocorrendo, limpa o texto e inicia o reconhecimento
+      finalTranscript = '';
+      transcription.textContent = '';
+      recognition.start();
+    }, false);
+ 
+  } else {
+    // Se a API não é suportada, esconde o botão e exibe uma mensagem
+    startButton.style.visibility = 'hidden';
+    transcription.textContent = 'Seu navegador não suporta a API de reconhecimento de fala.';
+  }
+ 
+  </script>
+ 
+</body>
+</html>
